@@ -7,9 +7,37 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>My Books</h1>
+    </header>
+    <main id="book-container">
+        
+    </main>
+    <div class="spacer"></div>
+    <button id="add-btn" command="show-modal" commandfor="form-dialog">
+        <svg fill="#000000" width="16px" height="16px" viewBox="0 0 24 24" id="plus" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M12,20a1,1,0,0,1-1-1V13H5a1,1,0,0,1,0-2h6V5a1,1,0,0,1,2,0v6h6a1,1,0,0,1,0,2H13v6A1,1,0,0,1,12,20Z" style="fill: rgb(255, 255, 255);"></path></svg>
+    </button>
 
-
+    <dialog id="form-dialog">
+        <form action="" id="add-book-form">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+            </div>
+            <div class="form-control">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+            </div>
+            <div class="form-control">
+                <label for="pages">Pages</label>
+                <input type="text" name="pages" id="pages" required>
+            </div>
+            <div class="button-group">
+                <button id="cancel-btn" command="close" commandfor="form-dialog" type="button">Cancel</button>
+                <button id="submit-btn" type="submit">Add</button>
+            </div>
+        </form>
+    </dialog>
     <script src="./app.js"></script>
 </body>
 </html>
